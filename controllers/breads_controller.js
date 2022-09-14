@@ -3,7 +3,11 @@ const breads = express.Router()
 const Bread = require('../modules/breads')
 
 breads.get('/', (req, res) => {
-  res.send(Bread)
+  res.render('Index',
+    {
+        breads: Bread
+    }
+  )
 })
 
 breads.get('/:arrayIndex', (req, res) => {
