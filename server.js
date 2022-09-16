@@ -23,3 +23,5 @@ app.use(express.static('public'))
 app.get('*', (req,res) => {
   res.send('404')
 }) 
+
+app.use(express.urlencoded({extended: true}))
